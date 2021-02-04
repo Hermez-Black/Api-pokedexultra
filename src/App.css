@@ -1,19 +1,19 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,9 +22,9 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
-.App-link {
+/* .App-link {
   color: #61dafb;
 }
 
@@ -35,4 +35,72 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0em;
 }
+.filterr {
+  background: #4868e4;
+  border-radius: 20px;
+}
+.App {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 35px; /* espacio entre cards columnas o verticalmente */
+  row-gap: 40px; /* Espacion entre cards horizontalmente */
+  padding: 0% 5%;
+  width: 85%;
+  font-family: "Roboto", sans-serif;
+  /* color: white; */
+}
+
+.types {
+  display: inline-block;
+  background-color: red;
+  padding: 5px 10px;
+  margin-right: 10px;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.filters {
+  margin-bottom: 1em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #76fd86;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+.ajust {
+  /* background-size: repeat; */
+  /* background: red; */
+  height: 160px;
+  width: 180px;
+  z-index: 5;
+}
+.description {
+  background: #eadeff;
+  width: 100%;
+  border-radius: 10px;
+  /* font-family: "Coda Caption", sans-serif; */
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-image: url("https://pokecompany.com/images/vhrf/guia/guia4/1.png");
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRQ9-MObRV-EiZ5xMGs9dh88hOwcGgY4y9vuA&usqp=CAU"); */
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");

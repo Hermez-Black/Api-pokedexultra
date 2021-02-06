@@ -15,12 +15,13 @@ import React from "react";
 
 const styles = {
   types: {
-    display: "inline-block",
-    padding: "5px 10px",
+    // display: "inline-block",
+    padding: "13px 10px",
     marginRight: "10px",
     color: "#fff",
     borderRadius: "4px",
-    cursor: "pointer"
+    cursor: "pointer",
+    fontFamily: "Roboto, sans-serif"
   },
   name: {
     backgroundColor: "#AAFFEC",
@@ -30,126 +31,22 @@ const styles = {
 };
 
 export default function Card(props) {
+  const {name, type, sprite, base} = props.pokemon
   return (
     <div className="card">
-      <h2 style={styles.name}>{props.name}</h2>
-      <img src={props.image} alt="pokemon" className="ajust" />
+      <h2 style={styles.name}>{name.english}</h2>
+      <img src={sprite} alt="pokemon" className="ajust" />
       <div className="description">
         <ul>
-          <li type="square">Hp: {props.base.HP}</li>
-          <li type="square">Ataque: {props.base.Attack}</li>
-          <li type="square">Defensa: {props.base.Defense}</li>
-          <li type="square">Velocidad: {props.base.Speed}</li>
+          <li type="square">Hp: {base.HP}</li>
+          <li type="square">Ataque: {base.Attack}</li>
+          <li type="square">Defensa: {base.Defense}</li>
+          <li type="square">Velocidad: {base.Speed}</li>
         </ul>
       </div>
       <div style={styles.types}>
-        {props.types.map((type) => {
-          if (type == ["Normal"]) {
-            return (
-              <span
-                style={{
-                  backgroundColor: "Black",
-                  display: "inline-block",
-                  padding: "8px 15px",
-                  marginRight: "10px",
-                  color: "#fff",
-                  borderRadius: "4px"
-                }}
-              >
-                {type}
-              </span>
-            );
-          } else if (type == ["Water"]) {
-            return (
-              <span
-                style={{
-                  backgroundColor: "Blue",
-                  display: "inline-block",
-                  padding: "8px 15px",
-                  marginRight: "10px",
-                  color: "#fff",
-                  borderRadius: "4px"
-                }}
-              >
-                {type}
-              </span>
-            );
-          } else if (type == ["Grass"]) {
-            return (
-              <span
-                style={{
-                  backgroundColor: "Green",
-                  display: "inline-block",
-                  padding: "8px 15px",
-                  marginRight: "10px",
-                  color: "#fff",
-                  borderRadius: "4px"
-                }}
-              >
-                {type}
-              </span>
-            );
-          } else if (type == ["Fire"]) {
-            return (
-              <span
-                style={{
-                  backgroundColor: "red",
-                  display: "inline-block",
-                  padding: "8px 15px",
-                  marginRight: "10px",
-                  color: "#fff",
-                  borderRadius: "4px"
-                }}
-              >
-                {type}
-              </span>
-            );
-          } else if (type == ["Poison"]) {
-            return (
-              <span
-                style={{
-                  backgroundColor: "Purple",
-                  display: "inline-block",
-                  padding: "8px 15px",
-                  marginRight: "10px",
-                  color: "#fff",
-                  borderRadius: "4px"
-                }}
-              >
-                {type}
-              </span>
-            );
-          } else if (type == ["Flying"]) {
-            return (
-              <span
-                style={{
-                  backgroundColor: "Gray",
-                  display: "inline-block",
-                  padding: "8px 15px",
-                  marginRight: "10px",
-                  color: "#fff",
-                  borderRadius: "4px"
-                }}
-              >
-                {type}
-              </span>
-            );
-          } else if (type == ["Bug"]) {
-            return (
-              <span
-                style={{
-                  backgroundColor: "Yellow",
-                  display: "inline-block",
-                  padding: "8px 15px",
-                  marginRight: "10px",
-                  color: "Black",
-                  borderRadius: "4px"
-                }}
-              >
-                {type}
-              </span>
-            );
-          }
+        {type.map((e, index) => {
+          return <button className={`btn1 ${e}`} key={index}> {e} </button>
         })}
       </div>
     </div>
@@ -172,3 +69,110 @@ export default function Card(props) {
 //     </div>
 //   );
 // }
+// if (type == ["Normal"]) {
+          //   return (
+          //     <span
+          //       style={{
+          //         backgroundColor: "Black",
+          //         display: "inline-block",
+          //         padding: "8px 15px",
+          //         marginRight: "10px",
+          //         color: "#fff",
+          //         borderRadius: "10px"
+          //       }}
+          //     >
+          //       {type}
+          //     </span>
+          //   );
+          // } else if (type == ["Water"]) {
+          //   return (
+          //     <span
+          //       style={{
+          //         backgroundColor: "Blue",
+          //         display: "inline-block",
+          //         padding: "8px 15px",
+          //         marginRight: "10px",
+          //         color: "#fff",
+          //         borderRadius: "10px"
+          //       }}
+          //     >
+          //       {type}
+          //     </span>
+          //   );
+          // } else if (type == ["Grass"]) {
+          //   return (
+          //     <span
+          //       style={{
+          //         backgroundColor: "Green",
+          //         display: "inline-block",
+          //         padding: "8px 15px",
+          //         marginRight: "10px",
+          //         color: "#fff",
+          //         borderRadius: "10px"
+          //       }}
+          //     >
+          //       {type}
+          //     </span>
+          //   );
+          // } else if (type == ["Fire"]) {
+          //   return (
+          //     <span
+          //       style={{
+          //         backgroundColor: "red",
+          //         display: "inline-block",
+          //         padding: "8px 15px",
+          //         marginRight: "10px",
+          //         color: "#fff",
+          //         borderRadius: "10px"
+          //       }}
+          //     >
+          //       {type}
+          //     </span>
+          //   );
+          // } else if (type == ["Poison"]) {
+          //   return (
+          //     <span
+          //       style={{
+          //         backgroundColor: "Purple",
+          //         display: "inline-block",
+          //         padding: "8px 15px",
+          //         marginRight: "10px",
+          //         color: "#fff",
+          //         borderRadius: "10px"
+          //       }}
+          //     >
+          //       {type}
+          //     </span>
+          //   );
+          // } else if (type == ["Flying"]) {
+          //   return (
+          //     <span
+          //       style={{
+          //         backgroundColor: "Gray",
+          //         display: "inline-block",
+          //         padding: "8px 15px",
+          //         marginRight: "10px",
+          //         color: "#fff",
+          //         borderRadius: "10px"
+          //       }}
+          //     >
+          //       {type}
+          //     </span>
+          //   );
+          // } else if (type == ["Bug"]) {
+          //   return (
+          //     <span
+          //       style={{
+          //         backgroundColor: "Yellow",
+          //         display: "inline-block",
+          //         padding: "8px 15px",
+          //         marginRight: "10px",
+          //         color: "Black",
+          //         borderRadius: "10px"
+          //       }}
+          //     >
+          //       {type}
+          //     </span>
+          //   );
+          // }
+        /* })} */

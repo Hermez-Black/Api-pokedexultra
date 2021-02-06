@@ -77,7 +77,7 @@
   background-color: #76fd86;
   justify-content: center;
   align-items: center;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 .ajust {
   /* background-size: repeat; */
@@ -92,6 +92,45 @@
   border-radius: 10px;
   /* font-family: "Coda Caption", sans-serif; */
   font-family: "Roboto", sans-serif;
+}
+.btn1 {
+  background-color: Black;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  border: none;
+  display: inline-block;
+  padding: 14px 16px;
+  margin-right: 10px;
+  color: #fff;
+  border-radius: 10px;
+}
+.Poison {
+  background: Purple;
+}
+
+.Normal {
+  background: Black;
+}
+
+.Fire {
+  background: red;
+}
+
+.Grass {
+  background: Green;
+}
+
+.Water {
+  background: Blue;
+}
+
+.Bug {
+  background: Yellow;
+  color: Black;
+}
+
+.Flying {
+  background: Gray;
 }
 
 body {

@@ -475,10 +475,10 @@ export default function App(){
         {
           /* Si el tipo de pokemon seleccionado tiene un valor igual a "Todos" entonces regresaré todos los pokemones que tenga el arreglo */
           /* Si no regresaré todos los pokemones que incluyan el valor del tipo de pokemon seleccionado  */
-          pokemons.filter( pokemon => { return typeSelected === "Todos" ?  true :  pokemon.type.includes(typeSelected) } ).map(pokemon => {
-            return (<Card name={pokemon.name.english} image={pokemon.sprite} base={pokemon.base} types={pokemon.type} />)
-          })
-        }        
+          pokemons
+            .filter( pokemon => { return typeSelected === "Todos" ?  true :  pokemon.type.includes(typeSelected) } )
+            .map((pokemon, i) => {return <Card key={i} pokemon={pokemon}/>})
+          }
       </div>
     </div>
   );
@@ -517,5 +517,5 @@ export default function App(){
   //   </div>
   // </div>
   // )
-}
+      }
 

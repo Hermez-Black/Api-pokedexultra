@@ -4,8 +4,8 @@ import React, { useState} from 'react';
 
 export default function App(){
   // Se declaran los estados con hooks el estado types y el estado pokemons
-  const [types,setTypes] = useState(["Grass", "Poison", "Fire", "Water", "Flying", "Bug", "Normal"]);
-  const [pokemons,setPokemons] = useState([{
+  const [types] = useState(["Grass", "Poison", "Fire", "Water", "Flying", "Bug", "Normal"]);
+  const [pokemons] = useState([{
     "id": 1,
     "name": {
       "english": "Bulbasaur",

@@ -47,14 +47,24 @@
   background: #4868e4;
   border-radius: 20px;
 }
+
+
+
+@media(min-width: 900px){
+  .App{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
 .App {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
   column-gap: 35px; /* espacio entre cards columnas o verticalmente */
   row-gap: 40px; /* Espacion entre cards horizontalmente */
   padding: 0% 5%;
   width: 85%;
   font-family: "Roboto", sans-serif;
+  /* margin-top: 20px; */
   /* color: white; */
 }
 
@@ -78,6 +88,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  margin-bottom: 30px;
 }
 .ajust {
   /* background-size: repeat; */
